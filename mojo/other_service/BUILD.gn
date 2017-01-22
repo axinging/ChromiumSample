@@ -1,0 +1,17 @@
+    import("//services/service_manager/public/cpp/service.gni")
+    import("//services/service_manager/public/service_manifest.gni")
+
+    service("other_service") {
+      sources = [ "other_service.cc" ]
+      deps = [ 
+          "//base", 
+          "//services/service_manager/public/cpp",
+          "//services/other_service/public/interfaces",
+      ]
+      data_deps = [ ":manifest" ]
+    }
+
+    service_manifest("manifest") {
+      name = "other_service"
+      source = "manifest.json"
+    }

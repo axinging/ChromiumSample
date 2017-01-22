@@ -1,0 +1,7 @@
+    {
+      "name": "other_service",
+      "display_name": "Other Service",
+      "inteface_provider_spec": {
+        "service_manager:connector": {}
+      }
+    }

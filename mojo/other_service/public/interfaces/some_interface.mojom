@@ -1,0 +1,6 @@
+module mojom;
+
+interface SomeInterface {
+  Foo();
+};
+
