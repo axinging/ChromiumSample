@@ -1,4 +1,3 @@
-# import("//mojo/public/mojo_application.gni")
 import("//services/service_manager/public/cpp/service.gni")
 import("//services/service_manager/public/service_manifest.gni")
 
