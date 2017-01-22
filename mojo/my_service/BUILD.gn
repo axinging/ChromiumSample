@@ -1,0 +1,14 @@
+# import("//mojo/public/mojo_application.gni")
+import("//services/service_manager/public/cpp/service.gni")
+import("//services/service_manager/public/service_manifest.gni")
+
+service("my_service") {
+  sources = [ "my_service.cc" ]
+  deps = [ "//base", "//services/service_manager/public/cpp" ]
+  data_deps = [ ":manifest" ]
+}
+
+service_manifest("manifest") {
+  name = "my_service"
+  source = "manifest.json"
+}
